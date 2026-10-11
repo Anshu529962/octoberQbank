@@ -10,11 +10,11 @@ CORS(app)                            # right after app = Flask(__name__)
 
 
 DB_CONFIG = {
-    "host": "localhost",
-    "database": "myapp_db",
-    "user": "postgres",
-    "password": "br09s3765",
-    "port": "5432",
+    "host": os.environ.get("DB_HOST", "localhost"),
+    "database": os.environ.get("DB_NAME", "myapp_db"),
+    "user": os.environ.get("DB_USER", "postgres"),
+    "password": os.environ.get("DB_PASSWORD", "br09s3765"),
+    "port": os.environ.get("DB_PORT", "5432"),
 }
 
 
