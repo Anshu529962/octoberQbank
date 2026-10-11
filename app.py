@@ -2,7 +2,8 @@ from flask import Flask, render_template, session, redirect, request, jsonify
 import psycopg2
 from psycopg2.extras import RealDictCursor
 from db import db_cursor
-from flask_cors import CORS         # with the other imports at the top
+from flask_cors import CORS  
+import os# with the other imports at the top
 
 app = Flask(__name__)
 app.secret_key = "change-this-to-a-random-string"
